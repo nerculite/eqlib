@@ -255,7 +255,7 @@ void EQLibImpl::HandleCreateGroundItem(EQGroundItem* groundItem)
 	m_pendingGroundItems.push_back(groundItem);
 }
 
-void EQLibImpl::HandleDestroyGroundItem(EQGroundItem* groundItem)  
+void EQLibImpl::HandleDestroyGroundItem(EQGroundItem* groundItem)
 {
 	auto it = std::find(m_pendingGroundItems.begin(), m_pendingGroundItems.end(), groundItem);
 	if (it != m_pendingGroundItems.end())
@@ -757,31 +757,8 @@ void EQLibImpl::ShutdownHooks()
 
 static constexpr uintptr_t PatchAddrs[] = {
 	0x1402820D1,
-	0x1402823B9,
-	0x14028254F,
-	0x1402826E5,
-	0x14028287B,
-	0x140282A11,
-	0x140282D5C,
 	0x140282F04,
-	0x1402830AC,
-	0x140283254,
-	0x1402833FC,
-	0x1402835A4,
-	0x14028374C,
-	0x1402838F4,
-	0x140283A9C,
-	0x140283C44,
-	0x140284806,
 	0x1402849AE,
-	0x14028220C,
-	0x140282BB2,
-	0x140283DF1,
-	0x140283FA0,
-	0x14028414F,
-	0x1402842FE,
-	0x1402844AD,
-	0x14028465C,
 };
 
 static std::vector<uintptr_t> s_installedPatches;
